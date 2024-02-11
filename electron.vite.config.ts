@@ -16,16 +16,16 @@ export default defineConfig({
     plugins: [externalizeDepsPlugin()]
   },
   renderer: {
-    assetsInclude: 'src/renderer/src/assets/**',
+    assetsInclude: 'src/renderer/assets/**',
     resolve: {
       alias: {
         '@renderer': resolve('src/renderer/src'),
         '@shared': resolve('src/shared'),
-        '@/components': resolve('src/renderer/src/components'),
-        '@/store': resolve('src/renderer/src/store'),
-        '@/utils': resolve('src/renderer/src/utils'),
+        '@/hooks': resolve('src/renderer/src/hooks'),
         '@/assets': resolve('src/renderer/src/assets'),
-        '@/hooks': resolve('src/renderer/src/hooks')
+        '@/store': resolve('src/renderer/src/store'),
+        '@/components': resolve('src/renderer/src/components'),
+        '@/mocks': resolve('src/renderer/src/mocks')
       }
     },
     plugins: [react()]
