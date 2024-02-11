@@ -1,7 +1,7 @@
 import { contextBridge } from 'electron'
 
 // Custom APIs for renderer
-const api = {}
+const api = { locale: navigator.language }
 
 if (process.contextIsolated) {
   try {
